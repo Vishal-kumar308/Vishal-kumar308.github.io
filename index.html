@@ -4,37 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vishal Kumar - Student Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+    :root {
+      --primary-color: #0066cc;
+      --bg-color: #f4f6f9;
+      --text-color: #333;
+      --white: #fff;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 40px 20px;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
-      background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: var(--white);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
     }
 
-    h1, h2 {
-      color: #333;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #222;
+      border-bottom: 2px solid var(--primary-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     ul {
-      list-style: square;
       padding-left: 20px;
-    }
-
-    .section {
-      margin-bottom: 30px;
+      margin-top: 10px;
     }
 
     a {
-      color: #0066cc;
+      color: var(--primary-color);
       text-decoration: none;
     }
 
@@ -42,68 +70,107 @@
       text-decoration: underline;
     }
 
-    p {
-      line-height: 1.6;
+    .info {
+      margin-bottom: 20px;
     }
 
-    strong {
-      color: #000;
+    .info p {
+      margin: 5px 0;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .highlight {
+      background-color: #eef6ff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .projects p {
+      margin-bottom: 15px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Vishal Kumar</h1>
-    <p><strong>Email:</strong> vk.vishal979@gmail.com</p>
-    <p><strong>Phone:</strong> 7880583744</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vishal-kumar-548823293" target="_blank">linkedin.com/in/vishal-kumar-548823293</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Vishal-kumar308" target="_blank">github.com/Vishal-kumar308</a></p>
+    <div class="info">
+      <p><strong>Email:</strong> <a href="mailto:vk.vishal979@gmail.com">vk.vishal979@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+917880583744">7880583744</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vishal-kumar-548823293" target="_blank">linkedin.com/in/vishal-kumar</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Vishal-kumar308" target="_blank">github.com/Vishal-kumar308</a></p>
+    </div>
 
-    <div class="section">
+    <div class="section highlight">
       <h2>About Me</h2>
-      <p>I am a Computer Science and Engineering student at SRMCEM. I'm passionate about learning and enjoy working on projects that help me learn and grow.</p>
+      <p>I am a Computer Science and Engineering student at SRMCEM. I'm passionate about learning and enjoy building projects that improve my skills and contribute to real-world solutions.</p>
     </div>
 
     <div class="section">
       <h2>Education</h2>
-      <p><strong>Bachelor of Technology, CSE</strong><br>
+      <p><strong>B.Tech in Computer Science</strong><br>
       SRMCEM, Lucknow<br>
-      Expected Graduation: July 2026<br>
-      GPA: 7.77</p>
+      <strong>Expected Graduation:</strong> July 2026<br>
+      <strong>GPA:</strong> 7.77</p>
     </div>
 
     <div class="section">
       <h2>Skills</h2>
       <ul>
-        <li>Programming: Python, Java, HTML/CSS</li>
-        <li>Tools: MS Office, GitHub, Canva</li>
-        <li>Languages: English, Hindi</li>
+        <li><strong>Programming:</strong> C, Python, Java, HTML, CSS, Javascript</li>
+        <li><strong>Tools:</strong> MS Office, GitHub, Excel</li>
+        <li><strong>Languages:</strong> English, Hindi</li>
       </ul>
     </div>
 
-    <div class="section">
+    <div class="section projects">
       <h2>Projects</h2>
-      <p><strong>Personal Budget Tracker</strong><br>
-      A Python project to help students manage their expenses and savings using CSV data.</p>
-
-      <p><strong>My Portfolio Website</strong><br>
-      Designed a personal website using HTML, CSS, and JavaScript to showcase my projects.</p>
+      <p><strong>💰 Personal Budget Tracker:</strong> A Python-based app using CSV to track expenses and savings for students.</p>
+      <p><strong>🌐 Portfolio Website:</strong> Designed using HTML, CSS, and JavaScript to showcase personal achievements and projects.</p>
     </div>
 
     <div class="section">
       <h2>Activities</h2>
       <ul>
-        <li>Member, Coding Club</li>
-        <li>Participant, Hackathon 2025</li>
+        <li>👨‍💻 Student Member of IEEE</li>
+        <li>🏆 Participant, Hackathon 2025</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Certifications & Awards</h2>
       <ul>
-        <li>IBM Cyber Security Certificate</li>
-        <li>IBM Python Certificate</li>
+        <li>📜 IBM Cyber Security Certificate</li>
+        <li>📜 IBM Python Certificate</li>
+        <li>📜 IBM Cloud Computing Certificate</li>
       </ul>
+    </div>
+
+    <div class="footer">
+      © 2025 Vishal Kumar. All rights reserved.
     </div>
   </div>
 </body>
